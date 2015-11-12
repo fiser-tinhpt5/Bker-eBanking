@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Chuyển khoản trong ngân hàng</title>
+	<meta charset="utf-8">
+	<script type="text/javascript" src="js/jquery-2.1.4.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+
+	<div id="header" class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="min-height: 80px;">
+		<div style="color:#FFFFFF">
+			<div id="left" class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+				<label id="logo" style="font-size:30px;margin-top: 15px;">
+					<a href="accountInfor.html">Bker-eBanking</a></label>
+			</div>
+			<div class="col-lg-6 col-md-6 col-sm-0 col-xs-0"></div>
+			<div id="right" class="col-lg-3 col-md-3 col-sm-12 col-xs-12" style="margin-top: 30px">
+				<label id="user">
+					<b style="font-size: 16px">Nguyen Van A</b>
+					[<a href="login.html">Thoat dang nhap</a>]</label>
+			</div>
+		</div>
+	</div>
+
+	<div id="content" class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="min-height: 460px; padding:10px;">
+		
+		<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">	
+			<div class="list-group">
+				<a id="menu1" class="list-group-item list-group-item-info">Thông tin tài khoản</a>
+					<div id="menu-item1" style="display: none">
+						<a href="editImformation.html" class="list-group-item">Thông tin cá nhân</a>
+						<a href="transactionHistories.html" class="list-group-item">Lịch sử giao dịch</a>
+					</div>
+				<a id="menu2" class="list-group-item list-group-item-info">Chuyển khoản</a>
+					<div id="menu-item2" style="display: none">
+						<a href="transferInBank.html" class="list-group-item">Chuyển tới tài khoản tại ngân hàng</a>
+						<a href="transferToOtherBank.html" class="list-group-item">Chuyển tới tài khoản ở ngân hàng khác</a>
+					</div>
+				<a id="menu3" class="list-group-item list-group-item-info">Dịch vụ</a>
+					<div id="menu-item3" style="display: none">
+						<a href="liquidate.html" class="list-group-item">Thanh toán hóa đơn</a>
+						<a href="economicalOnline.html" class="list-group-item">Gửi tiết kiệm online</a>
+						<a href="borrowMoney.html" class="list-group-item">Vay tiền online</a>
+					</div>
+				<a id="menu4" class="list-group-item list-group-item-info">Hỗ trợ</a>
+					<div id="menu-item4" style="display: none">
+						<a href="changePassword.html" class="list-group-item">Đổi mật khẩu</a>
+						<a href="lookUpTo.html" class="list-group-item">Tra cứu</a>
+					</div>
+			</div>		
+		</div>
+		
+		
+		<div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
+			<div id="right" class="panel panel-info">
+				<div class="panel-heading">
+	                <h3 class="panel-title">Chuyển khoản trong ngân hàng</h3>
+	            </div>
+
+				<form action="" method="">
+					
+					<div class="panel-body">
+						
+						<p><b>Thông tin giao dịch</b></p>
+                            <div id="row">
+                                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                    <p><b>Tài khoản chuyển</b></p>
+                                    <div class="dropdown">
+                                        <button class="btn btn-default dropdown-toggle btn-primary" type="button" data-toggle="dropdown">Chọn tài khoản
+                                        <span class="caret"></span></button>
+                                        <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Viettin Bank</a></li>
+                                            <li role="presentation" class="divider"></li>
+                                            <li role ="presentation"><a role="menuitem" tabindex="-1" href="#">ACB Bank</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                    <p><b>Số dư khả dụng</b></p>
+                                    <p id="balances"><font size="5"><span class="label label-danger">000.000.000 đ</span></font></p>
+                                </div>
+                            </div>
+                            <div id="row">
+                                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                    <p><b>Tài khoản/Số thẻ nhận</b></p>
+                                    <form action="" method="POST" role="form">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" id="inputAccReceive" cols="4" placeholder="Mã tài khoản">
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                    <p><b>Số tiền cần chuyển</b></p>
+                                    <form action="" method="POST" role="form">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" id="inputAmountTransfer" placeholder="Số tiền cẩn chuyển">
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="height:20px;"></div>
+                            <div id="row">
+                                 <div class="col-xs-0 col-sm-0 col-md-3 col-lg-3">
+                                 </div>
+                                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                                    <p><b>
+                                    Nội dung chuyển tiền</b></p>
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                    <textarea name="taContent" id="inputContent" class="form-control" rows="7" cols="25" required="required"></textarea>
+                                </div>
+                            </div>
+                       
+							<div id="row" class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="margin-top:20px">
+								<div class="col-xs-4 col-sm-4 col-md-5 col-lg-5 text-right">			
+								</div>
+								
+								<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 text-right" style="margin-left: 5px">
+									<button type="button" class="btn btn-success">Chấp nhận</button>
+								</div>
+
+								<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 text-right">
+									<button type="button" class="btn btn-success">Hủy</button>
+								</div>
+							</div>
+
+					</div>
+				</form>	
+
+
+			</div>
+		</div>	
+	</div>
+	
+	<div id="footer" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
+		<div id="contact">19001009</div>
+		<div id="email">bker.ebanking@fpt.com.vn</div>
+		<div id="address">20th Floor, tòa nhà Kaengnam 72 Phạm Hùng</div>
+	</div>
+</body>
+<script>
+    $(document).ready(function() {
+    $('#datetimepicker1')
+        .datepicker;
+	});
+	$(document).ready(function(){
+			$('#menu1').click(function(){
+				$('#menu-item1').slideToggle();
+			});
+
+			$('#menu2').click(function(){
+				$('#menu-item2').slideToggle();
+			});
+
+			$('#menu3').click(function(){
+				$('#menu-item3').slideToggle();
+			});
+
+			$('#menu4').click(function(){
+				$('#menu-item4').slideToggle();
+			});
+		})
+</script>
+</html>
